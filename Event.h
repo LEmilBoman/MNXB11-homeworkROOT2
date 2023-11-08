@@ -6,13 +6,15 @@
 class Event : public TObject {
   public:
     Event();
-    Event(Int_t event_numb);
+    Event(Int_t event_numb, Double_t px, Double_t py, Double_t pz);
     virtual ~Event();
+
+    Double_t Magnitude();
   private:
     Int_t event_numb;
-    //Double_t px;
-    //Double_t py;
-    //Double_t pz;
+    Double_t px;
+    Double_t py;
+    Double_t pz;
 
   ClassDef(Event, 1);
 };
